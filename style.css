@@ -104,3 +104,245 @@ button:hover{
     color: #8b5cf6;
     font-size: 12px;
 } 
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f8f5ff, #fdf2f8);
+    color: #333;
+}
+
+.container {
+    width: 92%;
+    max-width: 700px;
+    margin: 50px auto;
+}
+h1 {
+    text-align: center;
+    color: #6d28d9;
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+.container > p {
+    text-align: center;
+    color: #777;
+    margin-bottom: 30px;
+}
+.add-habit {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+    background: white;
+    padding: 10px;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+input {
+    flex: 1;
+    padding: 13px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+    background: #f9fafb;
+}
+
+input:focus {
+    border-color: #a78bfa;
+}
+
+#habitList{
+    display:flex;
+    flex-direction: column;
+    gap: 12px;
+}
+button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 10px;
+    background: #8b5cf6;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.2s ease;
+}
+
+button:hover {
+    background: #7c3aed;
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+.habit-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 18px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.habit-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 22px rgba(0, 0, 0, 0.09);
+}
+.habit-card span {
+    flex: 1;
+    text-align: left;
+    font-size: 16px;
+}
+
+.habit-card input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #8b5cf6;
+}
+
+.habit-card button {
+    background: #f3f4f6;
+    color: #ef4444;
+    padding: 8px 12px;
+    font-size: 12px;
+}
+
+.habit-card button:hover {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.habit-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.habit-card span {
+    flex: 1;
+    min-width: 100px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.habit-card small {
+    width: 100%;
+    text-align: left;
+    color: #7c3aed;
+    font-size: 12px;
+}
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 22px 12px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card h2 {
+    color: #7c3aed;
+    font-size: 30px;
+    margin-bottom: 6px;
+}
+
+.stat-card p {
+    margin: 0;
+    font-size: 13px;
+    color: #777;
+}
+@media (max-width: 600px) {
+
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+}
+.history {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 7px;
+    margin-top: 12px;
+}
+
+.day-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 7px 3px;
+    border-radius: 9px;
+    background: #f5f3ff;
+}
+
+.day-box small {
+    font-size: 10px;
+    color: #666;
+}
+
+.day-box span {
+    font-size: 18px;
+    color: #aaa;
+}
+.day-box.completed-day {
+    background: #ede9fe;
+}
+
+.day-box.completed-day span {
+    color: #7c3aed;
+    font-weight: bold;
+}
+@media (max-width: 600px) {
+
+    .container {
+        width: 94%;
+        margin: 30px auto;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .add-habit {
+        flex-direction: column;
+    }
+
+    .add-habit button {
+        width: 100%;
+    }
+
+    .habit-card {
+        padding: 15px;
+    }
+
+}
+
